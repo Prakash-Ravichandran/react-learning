@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX vs HTml</title>
+</head>
+<body>
+  
+    <h1>Ten aspects of comparison between React JSX & HTML</h1>
+    
+    <h2>1. Specifying the type of element in HTML & React</h2>    
+    <p><strong>In HTML:</strong>Specifying the type of HTML element</p>
+    <p>For ex: &#60;h1&#62; Hello world /&#62;</p>
+    <p>Here the type of h1 is an object & we usually call them as an element in html.</p>
+    <p>To ensure the type of HTML element, console them as below.</p>
+    <p>let h1 = document.getElementsByTagName('h1');</p> 
+    <p>console.log(typeof(h1)); // is an object</p>
+    <p>Note: An HTML element is case-insensive but during development it is preferred to use lowercase tag elements.</p>
+
+    <p><strong>In React:</strong>Specifying the React element type 
+    <p>The first part of the tag species the type of the react element</p>
+    <p>ex : &#60;div className="Icon-wrapper"/&#62;</p>    
+    <p>Though div tag comes under the HTML family, but in a react application we call them as react element.</p>    
+    <p>Note: Component Should be Started with Capital letter, indicating react, it's a React Component.</p>
+
+
+
+    <h2>2. Building Blocks of an Application</h2>
+    <p><Strong>In Html :</Strong> Objects are the building blocks of an application. Html provides the way of embedding(typing) of Elements(Objects) directly with the content whatever we want</p>
+    <p>For Example: Take the 'h1' as an example & console the h1 inside typeof(), we get them as "Object".</p>
+
+    <p><Strong>In React Jsx:</Strong> Components are the building blocks of an application. It can be a class or a functional component</p>
+    <p>Here the type of component can be a class or a function</p>
+    <p>Also, In React : The type of elements returned by a component is an object same as in html, but we call them as React Element.</p>
+    <p>For Example inspect the below snippet</p>
+    <iframe src="https://codesandbox.io/embed/confident-ganguly-76vex?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="React Element"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
+      <h2>3. Way of building the elements in HTML vs React</h2> 
+      <p><strong>In Html:</strong> The Way of building an application/Webpage is by placing the bricks(Objects(tags-elements)) one below the other & adding necessary contents inside the tags. Thats's why We are allowed to explicitly build the contents of a web application by writing the tags directly in the html document.</p>
+        <p>For Eg: &#60;h1&#62; Welcome to the Programming World  &#60;/h1&#62; followed by &#60;div&#62; elements.</p>
+        <p><strong>In React:</strong>The Way of building an application/webpage in React is by placing the Component one by one below in the root file.</p>
+        <p>Also,We define the elements explicit only in the 'Return' of a component.</p>
+        <p>For Eg: Inspect the below snippet</p>
+        <iframe src="https://codesandbox.io/embed/welcome-to-programming-world-puums?fontsize=14&hidenavigation=1&theme=dark"
+        style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+        title="Welcome to Programming World"
+        allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+      ></iframe>
+
+        <h2>4. Attributes in HTMl vs Props in a Component</h2>
+        <p><strong>In Html:</strong> We have Attributes attached to each DOM element, they follow the structure as below</p>
+        &#60;input type="text" name="name" id="firstname" placeholder="Enter Your Name"&#62; 
+        <p>Here, type, name, id, placeholder are called as attributes in HTML, we can assume these attributes as properties of the corresponsing DOM Element.Also,there are four types of attributes in html, they are required attributes,optional attributes, standard attributes, Event attributes</p>
+        <p>In most of the cases, the attribute type in HTML is a string.</p>
+        <p><strong>They are pinned to the DOM as:</strong> input = { type: "text", name: "name", id: "firstname", placeholder: "Enter Your Name"}</p>
+        <p><strong>In React:</strong>In a component, instead of attributes, we call them with a name called as 'props' <strong>whose type is an object</strong> </p>
+
+        <p>For Eg: Inspect the below React Snippet</p>
+        <p>Here, props are passed to the Input component as object, where each of them are the key-value pairs of the props object</p>
+        <p><u>Syntax:</u></p>
+        <p>props = {
+            Type: "text",
+            Id:"name",
+            Placeholder:"Enter Your Name"  
+        }</p>
+        <p><strong>In React:</strong> The props list can be a string type, number type, boolean type or else we can even have objects & functions.</p>
+        <iframe src="https://codesandbox.io/embed/props-an-object-in-react-ndmip?fontsize=14&hidenavigation=1&theme=dark"
+        style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+        title="Props - An Object in React"
+        allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
+
+        <h2>5. Insertion scenario of Elements in  HTML vs React</h2>
+        <p><strong>In Html:</strong>There is no scenario of any function calls behind the scenes while you're writing any HTML element & rendered them into the DOM. Because those element are all supported by all the browsers.</p>
+        <p><strong>In React:</strong>Since in React, it is possible to write Javascript along with HTML(JSX), so for each element before insertion into the DOM React.createElement() function call happen for conversion of JSX to pure JS.</p>
+        <p>Note:  During conversion of JSX into pure js, 'React' must be in scope because jsx calls to React.CreateElement(); so we need to import React in the top level. </p>
+        <iframe src="https://codesandbox.io/embed/scenarios-in-babel-d55yi?fontsize=14&hidenavigation=1&theme=dark"
+        style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+        title="Scenarios in babel"
+        allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
+
+        <h2>6. Structure of a Individual Element in  HTML vs React</h2>
+        <p><strong>In HTML:</strong>An Individual HTMl element starts with a tag-name(type is an object), followed by the attributes of that element. The attribute value of an HTML element in most of the cases was "String" type.</p>
+        <p>The value of the attribute enclosed in a double quotes can be of:</p>
+        <p>1. <strong>String type</strong> assigned to the attribute (E.g: &#60; input type="text" &#62;) - here "type" attribute's value is a string.</p>
+        <p>2.<strong> Path (absolute/relative)</strong> (E.g: &#60; img src="/images/blogpost.jpg" /&#62;) - here the value of src enclosed in a double quotes is a path of that image.</p>
+        <p>3. <strong> Attribute without a value</strong>(E.g: &#60; input type="text"  required /&#62;)- here the required attribute without a value, meant for HMTL5 Validation</p> 
+        <p><strong>A Typical HTML element looks like:-</strong></p>
+        <p>&#60;Object attribute1='value' attribute2='value' attribute3='value'&#62; content... &#60;Object/&#62;</p>
+        
+        <p><strong>In React:</strong>An Individual React element starts with a Component name(component can either be a function or class), followed by the props of that element. </p>
+        <p>The value of the prop passed to the component can be:</p>
+        <p>1. String Variable</p>
+        <p>2. Boolean Variable </p>
+        <p>3. Number Variable </p>
+        <p>4. Object </p>
+        <p>5. Function </p>
+        <p>6. May be a state variable of the component</p>
+        <p><strong>A Typical React element looks like:-</strong></p>
+         <p>&#60;Component prop1={value} prop2={value} prop3={value} /&#62;</p>
+
+
+        <h2>7. Handling Scripts in HTML vs React</h2>
+        <p><strong>In HTML:</strong>Two possible ways of writing scripts for an html document - internal sscripts(using script tag) & external scripts(added via &#60;link&#62; tag) </p>
+        <p><strong>In React:</strong>A Component file itself like .js (or) .jsx, where the scripts are placed above return() of a component & react elements are placed inside the return of a component</p>
+        <p>The advantage JSX is we could able to place & write expressions,calling the functions even including anonymous functions along with react elements</p>
+
+
+        <h2>8. Concept of Reusability in HTML vs React</h2>
+        <p><strong>In HTML:</strong> The concept of reusability of an HTML tag is nowhere. we are tend to add those tag everytime whereever necessary.</p>
+        <p><strong>In React:</strong> we can able to reuse the Input Component by passing the necessary props, while inspecting the DOM, we could able to find them as a single HTML element, but actually we are keeping a copy of that component by simply passing the props.</p>
+         <p><Strong>Theme</Strong> behind it was, for a component to be reusable, it has to take in data or data sets (via props) and return an output (usually through a function passed via props).</p>
+        <p>For E.g: In a input component, We can achieve different type of React Element by simple passing the prop <strong>"type"</strong>where we are consuming the component.</p>
+        <p><strong>Advantages: Saves time by ensuring: - </strong></p>
+        <p>1. Less code is written</p>
+        <p>2. Development is faster</p>
+        <p>3. Maintenance is easy</p>
+        <p>Check the below example for <strong>Reusability</strong></p>
+        <iframe src="https://codesandbox.io/embed/reusable-input-component-5odb7?fontsize=14&hidenavigation=1&theme=dark"
+        style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+        title="Reusable -Input Component"
+        allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+      ></iframe>
+
+        <h2>9. Handling of Reserved Keywords of Javascript in HTML vs React</h2>
+        <p><strong>In HTML:</strong>The Separation of the keywords is done through'Script' tags for internal scripts and external scripts attached through 'link' tags.</p>
+        <p><strong>In React:</strong>Since it possible to write Scripts & tag elements in a single file, in order to avoid clash of Javascript reserved keywords in JSX, we have new reserved keywords for JSX</p>
+        <p> E.g: 1. We have reserved keywords in JSX like instead of 'for' use 'htmlFor' because compiler asssumes 'for' as a keyword for looping.</p>
+        <p> E.g: 2. Reserved keywords in JSX like instead of 'class' we use 'className'.</p>
+
+        <h2>10. Storing of elements in HTML vs React</h2>
+        <p><strong>In HTML:</strong>We can able to catch an element using a WebAPI like 'getElementsByTagName'. Then we can manipulate the element but it is not possible to store an element directly as in JSX.</p>
+        <p><strong>In React:</strong>As it said earlier, we are allowed write markups & scripts in a single file, we can store a React element in a Javascript variable</p>
+        <p>E.g: const heading = &#60;h1&#62; Welcome !  &#60;h1/&#62;;</p>
+    </body>
+</html>

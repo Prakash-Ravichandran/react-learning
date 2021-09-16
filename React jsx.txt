@@ -13,7 +13,7 @@ Capitalized types indicate that the JSX tag is referring to a React component.  
 2. React Must Be in Scope
 
 
-During conersion of JSX into pure js ,
+During conversion of JSX into pure js ,
 
 jsx calls to React.CreateElement(); , so we need to import React .....
 
